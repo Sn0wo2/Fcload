@@ -50,10 +50,6 @@ func (l *YAML) Save(cfg any, fileName string) error {
 	return os.WriteFile(fileName, newData, 0644)
 }
 
-func (l *YAML) GetTag() string {
-	return "yaml"
-}
-
 func (l *YAML) GetAllowFileExtensions() []string {
-	return []string{l.GetTag(), "yml"}
+	return []string{"yaml", "yml"}
 }

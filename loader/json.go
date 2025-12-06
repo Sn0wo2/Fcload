@@ -32,10 +32,6 @@ func (l *JSON) Save(cfg any, fileName string) error {
 	return os.WriteFile(fileName, data, 0644)
 }
 
-func (l *JSON) GetTag() string {
-	return "json"
-}
-
 func (l *JSON) GetAllowFileExtensions() []string {
-	return []string{l.GetTag()}
+	return []string{"json"}
 }
